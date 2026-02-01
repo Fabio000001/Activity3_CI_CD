@@ -1,13 +1,13 @@
 services:
   db:
     image: mysql
-    container_name: companydb
+    container_name: ${{ secrets.MYSQL_DATABASE }}
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: mypassword
-      MYSQL_DATABASE: companydb
-      MYSQL_USER: fazt
-      MYSQL_PASSWORD: faztpassword
+      MYSQL_ROOT_PASSWORD: ${{ secrets.MYSQL_ROOT_PASSWORD }}
+      MYSQL_DATABASE: ${{ secrets.MYSQL_DATABASE }}
+      MYSQL_USER: ${{ secrets.MYSQL_USER }}
+      MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
     ports:
       - 3307:3306
     volumes:

@@ -1,7 +1,7 @@
-USE companydb;
+USE ${{ secrets.MYSQL_DATABASE }};
 
 DELIMITER $$
-USE `companydb`$$
+USE `${{ secrets.MYSQL_DATABASE }}`$$
 
 CREATE PROCEDURE `employeeAddOrEdit` (
   IN _id INT,
