@@ -58,6 +58,13 @@ jobs:
           mysql -h 127.0.0.1 -P 3307 -u ${{ secrets.MYSQL_USER }} -p${{ secrets.MYSQL_PASSWORD }} ${{ secrets.MYSQL_DATABASE }} < db/database.sql
       
       - name: Run tests with coverage
+        env:
+          PORT: 3000
+          DB_HOST: 127.0.0.1
+          DB_USER: ${{ secrets.MYSQL_USER }}
+          DB_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
+          DB_DATABASE: ${{ secrets.MYSQL_DATABASE }}
+          DB_PORT: 3307
         run: npm run test:coverage
       
       - name: Upload coverage artifact
