@@ -8,7 +8,7 @@
     "dev": "nodemon src/index.js",
     "start": "node src/index.js",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles",
-    "test:coverage":  "NODE_OPTIONS=--experimental-vm-modules jest  --detectOpenHandles --coverage --ci",
+    "test:coverage": "NODE_OPTIONS=--experimental-vm-modules jest  --detectOpenHandles --coverage --ci",
     "pretest": "cross-env NODE_ENV=test jest --clearCache",
     "lint": "eslint . --ext .js,.ts"
   },
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
+    "globals": "^17.3.0",
     "jest": "^29.0.3",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.11",
