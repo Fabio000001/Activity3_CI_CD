@@ -1,0 +1,6 @@
+name: CI - Node.js MySQL API
+ 
+on:
+  push:
+    pull_request:
+    branches: [ main ]
