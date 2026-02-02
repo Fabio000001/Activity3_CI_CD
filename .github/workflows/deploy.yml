@@ -70,7 +70,7 @@ jobs:
       - name: Upload coverage artifact
         uses: actions/upload-artifact@v4
         with:
-          name: coverage-report
+          name: deploy-coverage-report-${{ inputs.tag }}
           path: coverage/
       
       - name: Configure Git
